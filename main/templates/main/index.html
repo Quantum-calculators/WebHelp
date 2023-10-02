@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static "css/style.css" %}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap" rel="stylesheet">
+    </head>
+    <body style="background-image: url({% static "svg/back.svg" %});">
+        <h1 href="#" class="logo"> <svg width="107" height="61" viewBox="0 0 107 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.5614 28.7571C8.62714 27.9729 0 26.6657 0 15.5986C0 3.22428 10.37 0 21.4371 0H58.2986V61H25.3586C13.6814 61 1.22 58.9086 1.22 46.0114C1.22 35.6414 9.15 32.4171 18.5614 31.72V28.7571ZM26.0557 51.3271H45.2271V33.8114H24.9229C18.4743 33.8114 13.6814 37.0357 13.6814 42.9614C13.6814 49.2357 18.9971 51.3271 26.0557 51.3271ZM23.2671 8.62714C17.4286 8.62714 12.8971 11.5029 12.8971 17.6029C12.8971 23.9643 17.7771 26.84 25.01 26.84H45.2271V8.62714H23.2671Z" fill="white"/>
+            <path d="M93.5015 0.0680847H106.471V60.5915H93.5015V34.8258H58.1386V60.5915H45.1693V0.0680847H58.1386V25.4879H93.5015V0.0680847Z" fill="white"/>
+            </svg></h1> 
+
+        <section id="sec-1">
+            <div class="container">
+              <a href="#sec-2"> 
+                <script>
+                    function scr(x) {
+                      window.scrollTo({
+                        top: x,  
+                        behavior: 'smooth'
+                      })}
+                  </script>
+                <div class="scroll-down" ></div>
+              </a>
+        <h1 class="minilogotip"> <span id="words">WE WEB</span></h1>
+        <script type="text/javascript">
+            (function () {
+                var words = ["WE WEB","WE HELP"],
+                i = 0;
+                setInterval(function(){ $('#words').fadeOut(function(){
+                    $(this).html(words[(i = (i + 1) % words.length)]).fadeIn();
+                }); }, 10000)
+            })();
+        </script>
+        <div class="logotip"> <svg width="682" height="167" viewBox="0 0 682 167" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M280.728 81.24C266.136 80.088 253.464 78.168 253.464 61.912C253.464 43.736 268.696 39 284.952 39L339.096 39V128.6H290.712C273.56 128.6 255.256 125.528 255.256 106.584C255.256 91.352 266.904 86.616 280.728 85.592V81.24ZM291.736 114.392H319.896V88.664H290.072C280.6 88.664 273.56 93.4 273.56 102.104C273.56 111.32 281.368 114.392 291.736 114.392ZM287.64 51.672C279.064 51.672 272.408 55.896 272.408 64.856C272.408 74.2 279.576 78.424 290.2 78.424H319.896V51.672L287.64 51.672Z" fill="white"/>
+            <path d="M390.804 39.1H409.854V128H390.804V90.154H338.861V128H319.811V39.1H338.861V76.438H390.804V39.1Z" fill="white"/>
+            <path d="M133.12 38.4H151.808L119.168 128H95.488L79.872 45.184H75.648L59.264 128H36.48L2.816 38.4H21.76L43.52 102.912L44.16 122.624H48.512L49.152 102.912L67.968 38.4H87.552L106.88 102.784L107.136 122.624H111.488L112.128 102.912L133.12 38.4ZM241.537 52.864H184.065V78.336H237.441V89.984H184.065V113.536H241.537V128H166.529V38.4H241.537V52.864Z" fill="white"/>
+            <path d="M496.912 52.864H439.44V78.336H492.816V89.984H439.44V113.536H496.912V128H421.904V38.4H496.912V52.864ZM511.99 114.304V38.4H529.782V113.408H576.246V128H525.686C517.494 128 511.99 122.496 511.99 114.304ZM676.658 65.024C676.658 80.512 667.058 92.672 647.858 92.8L608.818 93.184V128H591.282V38.4H644.018C660.914 38.4 676.658 45.184 676.658 65.024ZM608.818 52.736V79.488H642.61C651.314 79.488 659.25 74.752 659.25 65.792C659.25 56.704 651.314 52.736 642.866 52.736H608.818Z" fill="white"/>
+            </svg>
+        </div>   
+        <form method='POST' id='link'> 
+            {% csrf_token %} 
+            {{ form }}
+            <button onclick="scr(1000)" class="btnbot" type="submit"> <svg width="206" height="47" viewBox="0 0 206 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 3L103 43L203 3" stroke="white" stroke-width="6" stroke-linecap="round">
+            </button>
+          </form> 
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
+          <script>
+            $(document).ready(function () {
+                // отслеживаем событие отправки формы
+                $('#link').submit(function () {
+                    // создаем AJAX-вызов
+                    $.ajax({
+                        data: $(this).serialize(), // получаем данные формы
+                        type: $(this).attr('method'), // GET или POST
+                        // если успешно, то
+                        success: function (response) {
+                            let el = document.getElementById('response');
+                          if (typeof el.innerText !== 'undefined') {
+                            let analiz = document.getElementById("analiz");
+                              analiz.parentNode.removeChild(analiz);
+                              let elem = document.createElement('div');
+                              elem.innerHTML = `<p style='font-size: 1.6rem; color:#fff' id='out1'> Ссылка на ресурс: ${response.link}</p>
+                              <p style='font-size: 1.6rem; color:#fff' id='out2'> Категория: ${response.category}</p> 
+                              <p style='font-size: 1.6rem; color:#fff' id='out3'>Тема: ${response.theme}</p>`
+                              el.prepend(elem)
+                          } else {
+                              el.textContent = `Ссылка на ресурс: ${response.link}  Категория: ${response.category}  Тема: ${response.theme}`;
+                          }
+                          window.scrollTo({
+                            top: 1000,  
+                            behavior: 'smooth'
+                          })
+                        },
+                        error: function (response) {
+                        }
+                    });
+                    return false;
+                });
+              })
+            </script>  
+    </div>
+</section>
+<section  id="sec-2">
+
+    <div class="container" id="response">
+        <h1 > 
+            <span class="analiz" id='analiz'>Анализируем информацию....</span>
+        </h1>
+    <div>
+        <a href="#sec-1" id='btnback'  onclick='data_remove()'><p style="font-size: 1.6rem; color:#fff; text-decoration: none;" >< Назад</p></a></div>
+    <script>
+        function data_remove(){
+            let out1 = document.getElementById("out1");
+            out1.parentNode.removeChild(out1);
+            let out2 = document.getElementById("out2");
+            out2.parentNode.removeChild(out2);
+            let out3 = document.getElementById("out3");
+            out3.parentNode.removeChild(out3);
+            let el = document.getElementById('response');
+            let elem = document.createElement('h1');
+            elem.innerHTML = '<span class="analiz" id="analiz">Анализируем информацию....</span>';
+            el.prepend(elem);
+        }
+    </script>
+    </div>
+  </section>
+        <!-- <button class="btnbot"> <svg width="206" height="47" viewBox="0 0 206 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 3L103 43L203 3" stroke="white" stroke-width="6" stroke-linecap="round"/>
+            </svg>  </button>
+            <script src="script.js"> </script> -->
+
+            <!-- <section id="section-1">
+                <a id="scroll-btn" href="#section-2"></a>
+              </section>
+              <section id="section-2">
+                <h1>HELLO THERE</h1>
+                <h2>WELCOME TO CODING ARTIST</h2>
+              </section> -->
+    </body>
+</html>

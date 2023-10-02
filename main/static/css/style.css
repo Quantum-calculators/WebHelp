@@ -1,0 +1,278 @@
+.btnbot{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 100px;
+    top: 85%;
+    background-color: black;
+    color: white;
+    border: none;
+    opacity: 0.7;
+}
+
+.btnbot:hover{
+    opacity: 1;
+    
+}
+
+.vstav{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid white;
+    border-radius: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 300px;
+    text-align: center;
+    color: #fff;
+    background-color: black;
+    font-size: large;
+    text-decoration: none;
+}
+
+
+.minilogotip{
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.logotip {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+#sec-2{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+
+/*body{
+    height: 100vh;
+    background-image: url(img1.jpg);
+    position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: change 10s infinite ease-in-out;
+}
+
+@keyframes change {
+    0%
+    {
+        background-image: url(img1.jpg);
+    }
+    50%
+    {
+        background-image: url(img4.jpg);
+    }
+    100%
+    {
+        background-image: url(img5.webp);
+    }
+}
+*/
+
+
+body {
+    animation-name: colorChange;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    font-family: 'Montserrat', sans-serif;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    margin: 0px;
+}
+
+ .img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+@keyframes colorChange {
+    0% {
+        background-color: #48cae4 ;    
+    }
+    20% {
+        background-color: #ffafcc ;   
+    }
+    40% {
+        background-color: #e85d04 ;   
+    }
+    60% {
+        background-color: #83c5be;  
+    }
+    80% {
+        background-color: #06d6a0 ;   
+    }
+    100% {
+        background-color: #9d4edd;   
+    }
+} 
+
+
+.analiz{
+    animation-name: analChange;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    border: none;
+}
+
+@keyframes analChange {
+    0% {
+        color: white ;    
+    }
+    20% {
+        color: gray ;   
+    }
+    40% {
+        color: white ;    
+    }
+    60% {
+        color: gray ;   
+    }
+    80% {
+        color: white ;    
+    }
+    100% {
+        color: gray ;   
+    }
+} 
+
+.logo{
+  position: absolute;
+  margin-top: 40px;
+  margin-left: 60px;
+
+}
+
+
+
+/* ----------
+
+
+
+section {
+    height: 100vh;
+    position: relative;
+  }
+  #section-1 {
+    background-color: #2d8df8;
+  }
+  a#scroll-btn {
+    position: absolute;
+    height: 10em;
+    width: 6.25em;
+    border: 0.5em solid #ffffff;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 6.25em;
+    border-radius: 3em;
+  }
+  a#scroll-btn:before {
+    position: absolute;
+    content: "";
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 1.2em;
+    height: 1.2em;
+    width: 1.2em;
+    background-color: #ffffff;
+    border-radius: 50%;
+    animation: move-down 2s infinite;
+  }
+  @keyframes move-down {
+    80% {
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateY(5.3em);
+      opacity: 0;
+    }
+  }
+  a#scroll-btn:after {
+    position: absolute;
+    content: "SCROLL DOWN";
+    width: 12em;
+    display: block;
+    width: 12em;
+    text-align: center;
+    left: -4.2em;
+    bottom: -2.5em;
+    font-size: 1.6em;
+    color: #ffffff;
+    letter-spacing: 3px;
+    font-weight: 600;
+  }
+  #section-2 {
+    background-color: #111315;
+    color: #ffffff;
+    font-size: 2.7em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+  } */
+
+
+  section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+ 
+  #sec-2 {
+    background-color: black;
+    
+  }
+  .scroll-down {
+    height: 100px;
+    width: 450px;
+    position: absolute;
+    left: 45%;
+    right: 50%;
+    bottom: 20px;
+    background-repeat: no-repeat;
+  }
+  
+  @keyframes scroll-down {
+    0% {
+      /* top:20%; */
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 1;
+    }
+    100% {
+      top: 90%;
+      opacity: 0;
+    }
+  }
+#sec-2{
+    color: antiquewhite;
+}
+
+
+
+
+
